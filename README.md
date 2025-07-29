@@ -27,8 +27,8 @@ This is my first time trying a Frontend Mentor challenge. I chose the blog previ
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github repo](https://github.com/zakaria-guenifi/blog-preview-card)
+- Live Site URL: [github pages live url](https://zakaria-guenifi.github.io/blog-preview-card/)
 
 ## My process
 I used only vanilla HTML-CSS for this project. I began by setting up a basic design system with custom properties for colors, typography, and spacing. After that, I created utility classes to speed up styling. Then I moved on to the HTML markup, structured the layout, and started applying my utility classes. Finally, I refined the design by replacing fixed font sizes and widths with a more fluid, responsive approach using clamp().
