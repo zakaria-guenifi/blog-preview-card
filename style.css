@@ -1,0 +1,154 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p {
+  margin-block-end: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+:focus-visible {
+    border-radius: var(--space-50);
+    outline: 3px dotted var(--gray-950);
+}
+::selection {
+    background-color: var(--yellow);
+    color: var(--gray-950);
+}
+li::selection {
+    background-color: var(--white);
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url(assets/fonts/static/Figtree-Medium.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+    font-weight: 800;
+}
+:root { 
+    /*--------colors--------*/
+    --yellow: hsl(47, 88%, 63%);
+    --gray-950: hsl(0, 0%, 7%);
+    --gray-500: hsl(0, 0%, 42%);
+     --white: hsl(0, 0%, 100%);
+
+    /*--------typography--------*/
+    --ff-sans: 'Figtree', sans-serif;
+    
+    --fs-300: clamp(0.75rem, 0.6276rem + 0.5155vw, 0.875rem);
+    --fs-400: clamp(0.875rem, 0.7526rem + 0.5155vw, 1rem);
+    --fs-600: clamp(1.25rem, 1.0052rem + 1.0309vw, 1.5rem);
+     
+    --fw-400: 400;
+    --fw-800: 800;
+
+    --lh-400: 1.5;
+
+    /*--------spacing--------*/
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-150: 12px;
+    --space-400: 24px;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+    align-content: center;
+    min-height: 100dvh;
+    font-family: var(--ff-sans);
+    font-size: var(--fs-400);
+    line-height: var(--lh-400);
+    background-color: var(--yellow); 
+}
+
+/*--------utility classes--------*/
+.flex {
+    display: flex; 
+    gap: var(--gap, 1rem);
+}
+.container {
+    padding-inline: 2em; 
+    margin-inline: auto; 
+    max-width: 80rem;
+}
+/* -------- */
+.text-gray-950 {
+    color: var(--gray-950);
+}
+.text-gray-500 {
+    color: var(--gray-500);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-white {
+    background-color: var(--white);
+}
+.bg-gray-950 {
+    background-color: var(--gray-950);
+}
+/* -------- */
+.ff-sans {font-family: var(--ff-sans);}
+
+.fw-400 {font-weight: var(--fw-400);}
+.fw-800 {font-weight: var(--fw-800);}
+
+.fs-300 {font-size: var(--fs-300);}
+.fs-400 {font-size: var(--fs-400);}
+.fs-600 {font-size: var(--fs-600);}
+
+.card {
+    position: relative;
+    place-self: center;
+    width: clamp(327px, 5vw + 300px, 384px);
+    padding: var(--space-400);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px; 
+    box-shadow: 8px 8px var(--gray-950);
+}
+.card > img {
+    width: 100%;
+    border-radius: 10px;
+    margin-block-end: var(--space-400);
+}
+.card-tag {
+    display: inline-block;
+    padding-inline: var(--space-150);
+    padding-block: var(--space-50);
+    border-radius: 4px;
+    margin-block-end: var(--space-150);
+}
+.card-title {
+    margin-block: var(--space-150);
+    :hover,
+    :focus-visible {
+        color: var(--yellow);
+        cursor: pointer;
+    }
+}
+.card-title > a {
+    color: inherit;
+    text-decoration: none;
+}
+.card-text { 
+    margin-block-end: var(--space-400);
+}
+
+.user-info {
+    align-items: center;
+    --gap: 0.75rem;
+}
+.user-info > img {
+    width: 32px;
+}
+@media (width < 53em) {
+
+}
